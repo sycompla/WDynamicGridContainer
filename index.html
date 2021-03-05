@@ -1,0 +1,78 @@
+<html>
+<head>
+    <script src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js" id="sap-ui-bootstrap" data-sap-ui-theme="sap_bluecrystal" data-sap-ui-libs="sap.ui.commons,sap.ui.table"></script>
+    <meta charset="utf-8">
+    <title>JS Bin</title>
+</head>
+<body class="sapUiBody" id="content" >
+<script id="view1" type="ui5/xmlview">
+
+    <mvc:View
+      controllerName="sources.controllers.view1"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:f="sap.f"
+        xmlns:card="sap.f.cards"
+        xmlns:w="sap.ui.integration.widgets"
+        displayBlock="true"
+        height="100%">
+
+
+<Panel id="idPnl" >
+        <Button
+                text="add"
+                press="addInput"/>
+
+    <ScrollContainer
+            id="ScrollP"
+            height="100%"
+            width="100%"
+            vertical="true">
+
+        <f:GridContainer
+                id="grid1"
+                class="sapUiSmallMargin"
+                snapToRow="true">
+            <f:layout>
+                <f:GridContainerSettings rowSize="84px" columnSize="84px" gap="8px" />
+            </f:layout>
+            <f:layoutXS>
+                <f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
+            </f:layoutXS>
+
+            <GenericTile header="Sales Fulfillment Application Title" subheader="Subtitle">
+                <layoutData>
+                    <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                </layoutData>
+                <TileContent unit="EUR" footer="Current Quarter">
+                    <ImageContent src="sap-icon://home-share" />
+                </TileContent>
+            </GenericTile>
+
+            <GenericTile header="Manage Activity Master Data Type" subheader="Subtitle">
+                <layoutData>
+                    <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                </layoutData>
+                <TileContent>
+                    <ImageContent src="sap-icon://activities" />
+                </TileContent>
+            </GenericTile>
+        </f:GridContainer>
+    </ScrollContainer>
+    </Panel>
+    </mvc:View>
+    </script>
+<script type="text/javascript">
+
+    sap.ui.localResources("sources");
+
+    sap.ui.controller("view.Main", {
+        doSomething : function(oEvent) {}
+    });
+    var oView = sap.ui.xmlview({
+        viewContent: jQuery("#view1").html()
+    });
+    oView.placeAt("content");
+</script>
+</body>
+</html>
