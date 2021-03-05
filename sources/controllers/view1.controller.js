@@ -1,7 +1,7 @@
 sap.ui.controller("sources.controllers.view1", {
     onInit: function(oEvent) {
 
-        this._oPnl = this.byId("ScrollP");
+        this._oPnl = this.byId("grid1");
     },
     addInput: function(){
         console.log("clicked")
@@ -15,7 +15,7 @@ sap.ui.controller("sources.controllers.view1", {
             justifyContent:"Start",
             items:[oInput1]
         });
-        this._oPnl.addContent(_oCcLayout);
+        this._oPnl.addItem(_oCcLayout);
     },
     getValue: function(){
         debugger;
