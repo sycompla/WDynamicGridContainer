@@ -10,9 +10,6 @@
 
 
     <Panel id="idPnl" >
-        <Button
-                text="add"
-                press="addInput"/>
 
         <ScrollContainer
                 id="ScrollP"
@@ -30,24 +27,6 @@
                 <f:layoutXS>
                     <f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
                 </f:layoutXS>
-
-                <GenericTile header="Sales Fulfillment Application Title" subheader="Subtitle">
-                    <layoutData>
-                        <f:GridContainerItemLayoutData minRows="2" columns="2" />
-                    </layoutData>
-                    <TileContent unit="EUR" footer="Current Quarter">
-                        <ImageContent src="sap-icon://home-share" />
-                    </TileContent>
-                </GenericTile>
-
-                <GenericTile header="Manage Activity Master Data Type" subheader="Subtitle">
-                    <layoutData>
-                        <f:GridContainerItemLayoutData minRows="2" columns="2" />
-                    </layoutData>
-                    <TileContent>
-                        <ImageContent src="sap-icon://activities" />
-                    </TileContent>
-                </GenericTile>
             </f:GridContainer>
         </ScrollContainer>
     </Panel>
