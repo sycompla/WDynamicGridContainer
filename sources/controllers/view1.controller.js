@@ -14,15 +14,15 @@ sap.ui.define(['sap/ui/core/mvc/Controller'],
             press:this.onDeleteCcMail
         });*/
                 let genericTile = new sap.m.GenericTile({
-                    header: 'Goal Completion',
+                    header: 'A very looooooooooooooooooooooooooooooooooooooooooong header',
                     subheader: 'Percentage completion of goals',
                     headerImage: 'sap-icon://goal',
                     press: function () {
                         alert();
                     },
                     layoutData: new sap.f.GridContainerItemLayoutData({
-                        minRows: 2,
-                        columns: 2
+                        minRows: 6,
+                        columns: 4
                     })
                 });
 

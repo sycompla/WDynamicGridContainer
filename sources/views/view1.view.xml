@@ -1,0 +1,54 @@
+<mvc:View
+        controllerName="sources.controllers.view1"
+        xmlns="sap.m"
+        xmlns:mvc="sap.ui.core.mvc"
+        xmlns:f="sap.f"
+        xmlns:card="sap.f.cards"
+        xmlns:w="sap.ui.integration.widgets"
+        displayBlock="true"
+        height="100%">
+
+
+    <Panel id="idPnl" >
+        <Button
+                text="add"
+                press="addInput"/>
+
+        <ScrollContainer
+                id="ScrollP"
+                height="100%"
+                width="100%"
+                vertical="true">
+
+            <f:GridContainer
+                    id="grid1"
+                    class="sapUiSmallMargin"
+                    snapToRow="true">
+                <f:layout>
+                    <f:GridContainerSettings rowSize="84px" columnSize="84px" gap="8px" />
+                </f:layout>
+                <f:layoutXS>
+                    <f:GridContainerSettings rowSize="70px" columnSize="70px" gap="8px" />
+                </f:layoutXS>
+
+                <GenericTile header="Sales Fulfillment Application Title" subheader="Subtitle">
+                    <layoutData>
+                        <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                    </layoutData>
+                    <TileContent unit="EUR" footer="Current Quarter">
+                        <ImageContent src="sap-icon://home-share" />
+                    </TileContent>
+                </GenericTile>
+
+                <GenericTile header="Manage Activity Master Data Type" subheader="Subtitle">
+                    <layoutData>
+                        <f:GridContainerItemLayoutData minRows="2" columns="2" />
+                    </layoutData>
+                    <TileContent>
+                        <ImageContent src="sap-icon://activities" />
+                    </TileContent>
+                </GenericTile>
+            </f:GridContainer>
+        </ScrollContainer>
+    </Panel>
+</mvc:View>
