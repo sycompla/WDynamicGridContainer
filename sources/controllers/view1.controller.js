@@ -19,7 +19,11 @@ sap.ui.define(['sap/ui/core/mvc/Controller'],
                     headerImage: 'sap-icon://goal',
                     press: function () {
                         alert();
-                    }
+                    },
+                    layoutData: new sap.f.GridContainerItemLayoutData({
+                        minRows: 2,
+                        columns: 2
+                    })
                 });
 
 
